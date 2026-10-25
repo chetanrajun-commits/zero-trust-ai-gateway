@@ -63,4 +63,4 @@ def test_empty_message_fails(client: TestClient) -> None:
     response = client.post("/v1/chat/completions", json=payload)
     
     # FastAPI will catch this via Pydantic validation
-    assert response.status_code == 422
+    assert response.status_code == 400
