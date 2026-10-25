@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  ai-gateway:
+    build: .
+    image: zero-trust-ai-gateway:dev
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-mock}
